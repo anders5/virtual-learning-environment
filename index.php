@@ -36,6 +36,7 @@
     }
     $sql = "SHOW TABLES FROM vledatabase";
     $result = $conn->query($sql);
+    
 
 if (!$result) {
     echo "DB Error, could not list tables\n";
@@ -43,7 +44,7 @@ if (!$result) {
     exit;
 }
 
-while($row = mysql_fetch_row($result)) {
+while ($row = mysql_fetch_row($result)) {
     echo "Table: {$row[0]}\n";
     echo "Entered statement";
 }
