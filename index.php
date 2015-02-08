@@ -45,6 +45,7 @@ if (!$result) {
 
 while($row = mysql_fetch_row($result)) {
     echo "Table: {$row[0]}\n";
+    echo "Entered statement";
 }
 
 mysql_free_result($result);
