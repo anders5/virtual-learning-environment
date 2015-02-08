@@ -34,8 +34,8 @@
     catch(Exception $e){
         die(var_dump($e));
     }
-    $sql = "SHOW TABLES FROM vledatabase";
-    $result = mysql_query($sql);
+    $sql_select = "SELECT * FROM groups";
+    $result = $conn->query($sql_select);
 
 if (!$result) {
     echo "DB Error, could not list tables\n";
