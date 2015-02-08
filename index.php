@@ -34,7 +34,7 @@
     catch(Exception $e){
         die(var_dump($e));
     }
-    $sql = "SHOW TABLES FROM $dbname";
+    $sql = "SHOW TABLES FROM vledatabase";
     $result = mysql_query($sql);
 
 if (!$result) {
