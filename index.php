@@ -34,8 +34,8 @@
     catch(Exception $e){
         die(var_dump($e));
     }
-    $sql = "SHOW TABLES FROM vledatabase";
-    $result = $conn->query($sql);
+$sql = "SHOW TABLES FROM vledatabase";
+$result = $conn->query($sql);
     
 
 if (!$result) {
@@ -46,7 +46,7 @@ if (!$result) {
 
 while ($row = mysql_fetch_row($result)) {
     echo "Table: {$row[0]}\n";
-    echo "Entered statement";
+    print "Entered statement";
 }
 
 mysql_free_result($result);
