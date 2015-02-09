@@ -43,7 +43,7 @@ if (!$result) {
     echo 'MySQL Error: ' . mysql_error();
     exit;
 }
-
+print "Entered statement";
 while ($row = mysql_fetch_row($result)) {
     echo "Table: {$row[0]}\n";
     print "Entered statement";
