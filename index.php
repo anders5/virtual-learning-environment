@@ -44,10 +44,10 @@ if (!$result) {
     exit;
 }
 
-$resultlist = $result->fetchAll();
-print_r($resultlist);
+#$resultlist = $result->fetchAll();
+#print_r($resultlist);
 
-while ($row = mysql_fetch_row($result)) {
+while ($row = $result->fetch) {
     echo "Table: {$row[0]}\n";
     print "Entered statement";
 }
