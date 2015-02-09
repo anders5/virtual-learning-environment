@@ -35,7 +35,7 @@
         die(var_dump($e));
     }
 $sql = "SHOW TABLES FROM vledatabase";
-$result = $conn->query($sql);
+$result = $conn->mysqli_query($sql);
     
 
 if (!$result) {
@@ -47,8 +47,8 @@ if (!$result) {
 #$resultlist = $result->fetchAll();
 #print_r($resultlist);
 
-while ($row = $result->fetch) {
-    echo "Table: {$row[0]}\n";
+while ($row = mysqli_fetch_row($result)) {
+    printf ("Table: %s\n", $row[0]);
     print "Entered statement";
 }
 
