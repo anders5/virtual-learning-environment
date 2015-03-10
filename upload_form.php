@@ -7,7 +7,7 @@
 	<?php
 	require_once("init.php");
 	$connection=db_connect();
-	$gid=$_GET['gid'];
+	$gid=$_SESSION['gid'];
 	?>
 </head>
 <body>
@@ -24,9 +24,10 @@
 	<main>
 			<article>
 				<h2>Upload your report here:</h2>
-				<form action="upload_result.php" method='POST'>
-					<textarea name="report" rows="30" cols="50">Copy your report here...</textarea><br />
-					<input type=hidden name="gid" value="<?php echo $gid ?>" />
+				<!-- remember to set file_uploads = On on php.ini -->
+				<form action="upload_result.php" method='POST' enctype="multipart/form-data">
+					<i>Only PDF files are allowed. Max size: 64mb.</i><br />
+					<input type=file name="report" id="report" accept=".pdf"> <br />
 					<input type="submit" value="Upload" />
 				</form>
 			</article>

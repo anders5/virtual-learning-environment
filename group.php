@@ -50,7 +50,7 @@
 			<section>
 				<h2>Group report:</h2>
 				<?php
-					$query ="SELECT id,content FROM reports WHERE reports.fk_group=$gid";
+					$query ="SELECT id,path FROM reports WHERE reports.fk_group=$gid";
 					$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysqli_error($connection));
 
 					if(mysqli_num_rows($result)==0){
@@ -58,14 +58,14 @@
 				?>
 					<form action="upload_form.php" method="GET">
 					Click here to upload your report:
-					<input type=hidden name="gid" value="<?php echo $gid ?>" />
 					<input type=submit value="Upload" />
 					</form>
 				<?php
 					}else{
 						$row=mysqli_fetch_array($result);
 						$report_id=$row['id'];
-						echo "$row[content]";
+						$name=basename($row['path']);
+						echo "<a href='$row[path]'>$name</a>";
 					}
 				?>
 			</section>
