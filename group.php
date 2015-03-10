@@ -8,11 +8,9 @@
 	<?php require_once("init.php");
 	$connection=db_connect();
 	$report_id=-1;
-	$gid=3;	//TODO generalize this part, getting the group id from 
-			//user id stored in $_SESSION array.
+	$gid=$_SESSION['gid'];	//TODO to be tested
 	function print_assessment_table($id){
-		$connection=mysqli_connect('localhost','andrea','glasgowkiss00','virtual_learning_environment')
-			   or die('Error connecting to the db'.mysql_error());
+		$connection=db_connect();
 		
 		echo "<table border=1>";
 		echo "<tr><td><b>Type</b></td><td><b>Description</b></td><td><b>Grade</b></td></tr>";

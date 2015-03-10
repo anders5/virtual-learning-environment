@@ -9,6 +9,7 @@
 <main>
     <?php
     require_once('init.php');
+	$connection=db_connect();
 
 if(!empty($_POST['username']) && !empty($_POST['password']))
 {

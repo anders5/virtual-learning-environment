@@ -11,7 +11,8 @@
 <main>
 <?php
     require_once('init.php');
-    
+    $connection=db_connect();
+	
     if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
     {
         ?>
@@ -35,7 +36,8 @@
             
          
             $_SESSION['Username'] = $username;
-            
+            $_SESSION['uid']=$row['id'];
+			$_SESSION['gid']=$row['fk_group'];
             $_SESSION['LoggedIn'] = 1;
          
             echo "<h1>Success</h1>";
