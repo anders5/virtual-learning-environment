@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php include "base.php"; ?>
 
 <html>
 <head>
@@ -9,16 +9,8 @@
 </head>  
 <body>  
 <div id="main">
-<?php
-    session_start();
-  
-    $host = "localhost";
-    $user = "root";
-    $pwd = "";
-    $db = "virtual_learning_environment";
-    // Connect to database.
-    $connection = mysqli_connect($host,$user,$pwd,$db) or die("MySQL Error: " . mysql_error());
     
+    <?php
     if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
     {
         ?>
@@ -59,7 +51,7 @@
     else
     {
     ?>
-        //display the registration form
+        
            <h1>Member Login</h1>
      
             <p>Thanks for visiting! Please either login below, or <a href="register.php">click here to register</a>.</p>

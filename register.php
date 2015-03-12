@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">  
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<?php include "base.php"; ?>
  
 <title>Virtual Learning Environment</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -8,14 +7,6 @@
 <body>  
 <div id="main">
     <?php
-    session_start();
-  
-    $host = "localhost";
-    $user = "root";
-    $pwd = "";
-    $db = "virtual_learning_environment";
-    // Connect to database.
-    $connection = mysqli_connect($host,$user,$pwd,$db) or die("MySQL Error: " . mysql_error());
 
 if(!empty($_POST['username']) && !empty($_POST['password']))
 {
