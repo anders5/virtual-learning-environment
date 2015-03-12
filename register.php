@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include "base.php"; ?>
+
  
 <title>Virtual Learning Environment</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -7,11 +7,11 @@
 <body>  
 <main>
     <?php
-<<<<<<< HEAD
-=======
+
+
     require_once('init.php');
 	$connection=db_connect();
->>>>>>> 6586c0e12f3d1efb87b0a481071cd4100edf2c45
+
 
 if(!empty($_POST['username']) && !empty($_POST['password']))
 {
