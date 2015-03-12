@@ -8,9 +8,17 @@
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>  
 <body>  
+<<<<<<< HEAD
 <div id="main">
     
     <?php
+=======
+<main>
+<?php
+    require_once('init.php');
+    $connection=db_connect();
+	
+>>>>>>> 6586c0e12f3d1efb87b0a481071cd4100edf2c45
     if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
     {
         ?>
@@ -34,7 +42,8 @@
             
          
             $_SESSION['Username'] = $username;
-            
+            $_SESSION['uid']=$row['id'];
+			$_SESSION['gid']=$row['fk_group'];
             $_SESSION['LoggedIn'] = 1;
          
             echo "<h1>Success</h1>";
@@ -72,6 +81,6 @@
     }
     ?>
 
-</div>
+</main>
 </body>
 </html>
