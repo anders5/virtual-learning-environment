@@ -9,19 +9,7 @@
 	$connection=db_connect();
 	$report_id=-1;
 	$gid=$_SESSION['gid'];	//TODO to be tested
-	function print_assessment_table($id){
-		$connection=db_connect();
-		
-		echo "<table border=1>";
-		echo "<tr><td><b>Type</b></td><td><b>Description</b></td><td><b>Grade</b></td></tr>";
-		
-		$query ="SELECT type,description,grade FROM criteria WHERE fk_assessment=$id ORDER BY type ASC";
-		$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysql_error());
-		while($row=mysqli_fetch_array($result)){
-			echo "<tr><td>$row[type]</td><td>$row[description]</td><td>$row[grade]</td></tr>";
-		}
-		echo "</table>";
-	}
+	
 	?>
 </head>
 <body>
@@ -111,7 +99,6 @@
 								?>
 									<form action="assessment.php" method="GET"><!-- TODO check the link-->
 									Click here to assess this report:
-									<!--<input type=hidden name="gid" value="<?php echo $gid ?>" />-->
 									<input type=submit value="Assess" />
 									</form>
 								<?php
