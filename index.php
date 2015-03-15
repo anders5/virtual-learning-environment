@@ -43,6 +43,7 @@
             $_SESSION['Username'] = $username;
             $_SESSION['uid']=$row['id'];
 			$_SESSION['gid']=$row['fk_group'];
+			$_SESSION['admin']=$row['admin'];
             $_SESSION['LoggedIn'] = 1;
          
             echo "<h1>Success</h1>";

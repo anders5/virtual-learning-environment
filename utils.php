@@ -1,0 +1,36 @@
+<?php
+
+//connects to 'virtual_learning_environment' db.
+function db_connect(){
+		$connection=mysqli_connect('localhost','root','','virtual_learning_environment')
+			   or die('Error connecting to the db'.mysqli_error($connection));
+		return $connection;
+}
+
+//prints a table which contains all the critera for a certain assessment.
+function print_assessment_table($id){
+		$connection=db_connect();
+		
+		echo "<table border=1>";
+		echo "<tr><td><b>Type</b></td><td><b>Description</b></td><td><b>Grade</b></td></tr>";
+		
+		$query ="SELECT type,description,grade FROM criteria WHERE fk_assessment=$id ORDER BY type ASC";
+		$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysql_error());
+		while($row=mysqli_fetch_array($result)){
+			echo "<tr><td>$row[type]</td><td>$row[description]</td><td>$row[grade]</td></tr>";
+		}
+		echo "</table>";
+}
+
+//prints a single line of a table, representing a forum post.
+function print_forum_post($author,$creation,$content){
+	echo "<tr>";
+	echo "<td><i>Posted on: </i>$creation<br />";
+	echo "<i>By: </i>$author";
+	echo "</td>";
+	echo "<td>$content</td>";
+	echo "</tr>";
+}
+
+
+?>
