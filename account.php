@@ -13,11 +13,13 @@
         $username = $_SESSION['Username'];
         $userinfo = mysqli_query($connection, "SELECT * FROM students WHERE username = '".$username."' ");
         $row = mysqli_fetch_array($userinfo);
+        
         ?>
+    <a href="editaccount.php"> Edit account. </a>
         <form action="./change.php" method="post"> 
-        First name: <br />
-        Last name:  <br />
-        Username: <code><?=$_SESSION['Username']?></code> <br />
+            Username: <code><?=$_SESSION['Username']?></code> <br />
+            First name: <code><?=$row['first_name']?></code> <br />
+            Last name: <code><?=$row['last_name']?></code> <br />
         </form>
         
         <?php
