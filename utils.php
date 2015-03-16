@@ -32,5 +32,15 @@ function print_forum_post($author,$creation,$content){
 	echo "</tr>";
 }
 
+//generate the list of all students. the output is suitable for a drop-down list.
+function generate_students_option_list($connection,$default){
+	$query="SELECT username FROM students ORDER BY username";
+	$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysqli_error($connection));
+	
+	while($row=mysqli_fetch_array($result)){
+		$selected=($row['username']==$default)?("selected='selected'"):("");
+		echo "<option ".$selected."value='$row[username]'>$row[username]</option>";
+	}
+}
 
 ?>

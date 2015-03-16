@@ -13,11 +13,11 @@
 <body>
 	<header>
 	<?php require_once('navbar.php'); ?>
+	<h1>Search result:</h1>
 	</header>
 	
 	<main>
 		<article>
-			<h1>Search result:</h1>
 			<?php
 				$title=mysqli_real_escape_string($connection,$_GET['title']);
 				$where="WHERE title LIKE '%$title%' ";
