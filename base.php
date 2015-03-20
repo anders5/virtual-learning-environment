@@ -1,6 +1,7 @@
 <?php
 
-session_start();
+require_once("init.php");
+
   
     $host = "localhost";
     $user = "root";
@@ -10,3 +11,4 @@ session_start();
     $connection = mysqli_connect($host,$user,$pwd,$db) or die("MySQL Error: " . mysql_error());
     
     ?>
+

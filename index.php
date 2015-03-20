@@ -5,9 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 <Title>Virtual Learning Environment</Title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 </head>  
 <body>  
+    <?php include "navbar.php"; ?>
 <div id="main">
     
     <?php
@@ -48,7 +52,7 @@
          
             echo "<h1>Success</h1>";
             echo "<p>We are now redirecting you to the member area.</p>";
-            echo "<meta http-equiv='refresh' content='=2;index.php' />";
+            echo "<meta http-equiv='refresh' content='=2;account.php' />";
         }   
     else
     {

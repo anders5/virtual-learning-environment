@@ -2,12 +2,16 @@
 
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<title>Forum</title>
 	<?php 
 		require_once('init.php');
 		$connection=db_connect();
-		$uid	=$_SESSION['uid'];
+		$uid	= $_SESSION['uid'];
 		
 		//new thread created, store it in the db
 		if(isset($_POST['newpost'])){
@@ -24,6 +28,8 @@
 	?>
 </head>
 <body>
+    <?php include "navbar.php"; ?>
+<div id="main">
 	<header>
 	<h1>Public Forum</h1>
 	<?php require_once('navbar.php'); ?>

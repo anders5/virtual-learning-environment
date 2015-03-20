@@ -9,8 +9,13 @@
 		$connection=db_connect();
 	?>
 	<title></title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 </head>
 <body>
+    <div id="main">
 	<header>
 	<?php require_once('navbar.php'); ?>
 	</header>

@@ -2,9 +2,13 @@
 <?php include "base.php"; ?>
  
 <title>Virtual Learning Environment</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
 <link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 </head>  
 <body>  
+    <?php include "navbar.php"; ?>
 <div id="main">
     
     <h1>Paper Assessment Form</h1>

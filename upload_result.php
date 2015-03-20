@@ -2,6 +2,10 @@
 
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<title>Report upload</title>
 	<?php
@@ -40,6 +44,8 @@
 	?>
 </head>
 <body>
+    <div id="main">
+        <?php include "navbar.php"; ?>
 	<main>
 		<article>
 		<?php

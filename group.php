@@ -2,6 +2,10 @@
 
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 	<title>Group main page</title>
@@ -13,6 +17,8 @@
 	?>
 </head>
 <body>
+    <?php include "navbar.php"; ?>
+<div id="main">
 	<?php
 	$query ="SELECT name FROM groups where id=$gid";
 	$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysql_error());

@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script src="js/jquery-2.1.3.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
 	<meta charset="utf-8">
 	<?php
@@ -11,6 +15,8 @@
 	<title>Group edit</title>
 </head>
 <body>
+        <?php include "navbar.php"; ?>
+        <div id="main">
 	<h1>Admin control page</h1>
 	<header>
 	<?php require_once('navbar.php');?>
