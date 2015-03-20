@@ -2,7 +2,7 @@
 
 //connects to 'virtual_learning_environment' db.
 function db_connect(){
-		$connection=mysqli_connect('localhost','root','','virtual_learning_environment')
+		$connection=mysqli_connect('eu-cdbr-azure-north-b.cloudapp.net','b71a879e88f712','6c9071b0','vledatabase')
 			   or die('Error connecting to the db'.mysqli_error($connection));
 		return $connection;
 }
