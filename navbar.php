@@ -1,4 +1,4 @@
-<?php include "base.php"; ?>
+
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">

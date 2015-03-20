@@ -2,7 +2,7 @@
 
 //connects to 'virtual_learning_environment' db.
 function db_connect(){
-		$connection=mysqli_connect('eu-cdbr-azure-north-b.cloudapp.net','b71a879e88f712','6c9071b0','vledatabase')
+		$connection=mysqli_connect("eu-cdbr-azure-north-b.cloudapp.net","b71a879e88f712","6c9071b0","vledatabase")
 			   or die('Error connecting to the db'.mysqli_error($connection));
 		return $connection;
 }
@@ -14,10 +14,10 @@ function print_assessment_table($id){
 		echo "<table border=1>";
 		echo "<tr><td><b>Type</b></td><td><b>Description</b></td><td><b>Grade</b></td></tr>";
 		
-		$query ="SELECT type,description,grade FROM criteria WHERE fk_assessment=$id ORDER BY type ASC";
+		$query ="SELECT type,comment,grade FROM criteria WHERE fk_assessment=$id ORDER BY type ASC";
 		$result=mysqli_query($connection,$query) or die('Error in mySQL query'.mysql_error());
 		while($row=mysqli_fetch_array($result)){
-			echo "<tr><td>$row[type]</td><td>$row[description]</td><td>$row[grade]</td></tr>";
+			echo "<tr><td>$row[type]</td><td>$row[comment]</td><td>$row[grade]</td></tr>";
 		}
 		echo "</table>";
 }
