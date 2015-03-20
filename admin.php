@@ -82,7 +82,7 @@
 		
 		foreach($checks as $i => $checked){
 			if($checked){
-				$query ="INSERT INTO assessments VALUES(NULL,$gid,$i,0)";
+				$query ="INSERT INTO assessments VALUES(NULL,$gid,$i,0,NULL)";
 				if(!$result=mysqli_query($connection,$query))
 					echo "<i>Couldn't add assessment for group $gid.</i><br />";
 			}
